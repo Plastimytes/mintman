@@ -1,0 +1,4 @@
+//Var, let and const are all used for similar purposes and that is to assign values where neccessary in a given code the following are some differences between them.
+//Var and let allow for increase and decrease of the assigned value while const does not allow changes once a value is set.
+//Var and const are usually uesd for integers, floats and values related to numbers while let can be used for integers, strings and all others.
+//Nothing would happen if one tied to reassign values to variables declared with let the code would still run while reassigning a value declared with const would cause an error in the code.
