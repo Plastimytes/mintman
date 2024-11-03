@@ -1,46 +1,62 @@
-console.log("Hello World");
+const express = require('express');
+const app = express();
+const port = 2000;
 
-let first_name="Jane";
-let last_name="Doe";
+//Get request //This shows words in the respond in the browser.
+app.get('/', (request, response) => {
 
-const PIE = 3.13243;
-const MAX_SPEED = 4000; //Const names must be in capital lettters//Const makes sure the variable remains the same
+     response.send({msg: "Haroo Evribadi !!"});//Basic minimum for an appplication to run
+});
 
-var school_name="UCU"; //Var is old school//
+//list of friends
+let friends = ["John", "Peter", "Fred", "Jack", "Jill"];
 
-//One line comment
-/*
-Multiple line comments
-*/
+app.get('/',(request, response) =>{
+     return response.send(friends)
+})
 
-///THE CODE QUEST OF THE TECH QUEENS///
-//Zara's Vault of Variables//
-let queeenName="Zara";
-let completedChallenges=0;
- completedChallenges=completedChallenges+1;
- console.log(completedChallenges);
+// object list of friends
+let list_of_friends = [{"id":1,"Name":"John"}, {"id":2,"Name":"Peter"},
+                       {"id":3,"Name":"Fred"}, {"id":4,"Name":"Jack"},
+                       { "id":5,"Name":"Jill"}];
 
-//Amina's Amazing Functions//
-function celebrateWin(challengeName){
-    console.log("Challenge:"+ challengeName +"completed!")
-    console.log("Time to take the next challenge")
-}
+app.get('/list_of_friends',(request, response) =>{
+     return response.send(list_of_friends);
+});     
 
-celebrateWin("Fire Challenge")
+//List of friends by id
+let list_of_friends_by_Id = [{"id":1,"Name":"John"}, {"id":2,"Name":"Peter"},
+                             {"id":3,"Name":"Fred"}, {"id":4,"Name":"Jack"},
+                             { "id":5,"Name":"Jill"}];     
 
-//Linas legendary loops//
-for (let i=1; i<=3; i+=1){
-    console.log("The Tech Queens have solved challenge X")
-}
+app.get('/list_of_friends_by_id/:Id',(request, response) =>{
+     console.log("Logging request paarams",request.params)//List_of_Friends_by_id is an end point 
+     return response.send("SEND NOTHING BACK");
+});
 
-let nextChallenge = "loops";
-if(nextChallenge==="loops"){
-    console.log("Time to practice loops")
-}
-if (nextChallenge ==="functions") {
-    console.log("Time to master functions")
-    
-} 
-if (nextChallenge !=="functions" & nextChallenge !=="loops") {
-    console.log("On to the next challenge")
-}
+let students = [{"id":1,"Name":"John"}, {"id":2,"Name":"Peter"},
+                {"id":3,"Name":"Fred"}, {"id":4,"Name":"Jack"},
+                { "id":5,"Name":"Jill"}];     
+
+//Responsive UI USING FOR LOOPS                
+app.get('/list_of_friends_by_id/:StudentId',(request, response) =>{
+      console.log("Logging request paarams",request.params)
+      console.log("Using value from the front end",request.params.StudentId)
+
+      for(i=1; i<5; i++){
+       if (request.params.StudentId==students[i].StudentId)
+        console.log(students[i]);
+      }
+      return response.status(400).send("found nothing");
+});
+
+
+
+//Which port the app will listen from
+app.listen(port, () => {
+    console.log('Example app listening at http://localhost:2000');
+});
+
+
+
+
