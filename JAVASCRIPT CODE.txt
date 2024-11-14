@@ -46,5 +46,20 @@ app.listen(port, () => {
 });
 
 
+<b>FRONT END DEVELOPMENT</b>
+Rapid API(Website to grab APIs for your code
+Creating your own APIs
+Diference between a get and post method.
+Get- Is used to retrieve data
+Post- Is used to submit data
+Put- Edits an entire row
+Patch- Edits a single value
 
+Material UI can help you better edit your web application
+
+Find,Map, Filter, For each (Go and make research)
+Call back functions in front end dev
+Functions without names are known as anonymous functions.
+Destructing
+Creating links in the front end that give more info on the part clicked. 
 
