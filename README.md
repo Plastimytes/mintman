@@ -47,3 +47,8 @@ function App() {
 
 export default App;
 
+
+
+
+JavaScript is the main language for creating web applications 
+
