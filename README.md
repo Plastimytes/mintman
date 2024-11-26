@@ -53,3 +53,5 @@ export default App;
 JavaScript is the main language for creating web applications 
 
 Thunder client or postman is best for viewing backend of web apps
+
+Posting may prove annoying and difficult at first
