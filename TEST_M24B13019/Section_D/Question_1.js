@@ -3,7 +3,6 @@
 
 
 //Prompt statement
-
 console.log("Please choose a network provider:");
 console.log("1. MTN");
 console.log("2. Airtel");
