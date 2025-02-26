@@ -15,5 +15,6 @@ let school={
     studentCount: 1300,
     establishedYear: 2000
 };
+
 let {Schname, location,studentCount}=school;
 console.log(Schname,"is in",location,"with",studentCount,"students");
