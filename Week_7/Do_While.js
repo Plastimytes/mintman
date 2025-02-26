@@ -1,4 +1,5 @@
 let i=0;
+
 do{
     console.log("I =",i);
     i++;
