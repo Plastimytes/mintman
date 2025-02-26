@@ -4,6 +4,7 @@ let ugandanFarmer={
     farmLocation:"Mbale",
     crop:"Coffe",
 };
+
 let {nme, farmLocation,crop}=ugandanFarmer;
 console.log(nme,"farms",crop,"in",farmLocation,);
 
