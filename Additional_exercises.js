@@ -17,6 +17,7 @@ console.log("The profit of the boda boda rider :", profit,"Uganda shillings");
 
 ////Ugandan football team
 let UgandanFootballTeam={
+
     //Properties for a UgandanFootballTeam
     TeamName:"SC Kyombo",
   
