@@ -6,7 +6,7 @@ let BodaBodaRider={
     BodaType:"Bajaj",
     FarePerKm:3000,
    
-    //Calculating the profits made by the boda boda rider
+//Calculating the profits made by the boda boda rider
     calculateProfit:function(DistanceInKm){
         return DistanceInKm*this.FarePerKm;
     }
